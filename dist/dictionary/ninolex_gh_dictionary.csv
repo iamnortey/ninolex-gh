@@ -1,0 +1,120 @@
+grapheme,phoneme,domain,category,region,city,alias,notes,source_file
+WASSCE,ˈwasi,core,exam,,,,West African Senior School Certificate Examination,data/core/core_terms.csv
+BECE,ˈbiːsiː,core,exam,,,,Basic Education Certificate Examination,data/core/core_terms.csv
+waakye,ˈwa.tʃe,core,food,,,,Ghanaian rice and beans dish,data/core/core_terms.csv
+dumsor,ˈduːmsɔː,core,slang,,,,Power outages,data/core/core_terms.csv
+banku,ˈbaŋku,core,food,,,,Maize and cassava dough dish,data/core/core_terms.csv
+fufu,ˈfuːfuː,core,food,,,,Pounded cassava and plantain,data/core/core_terms.csv
+kenkey,ˈkɛŋkeɪ,core,food,,,,Fermented maize dumpling,data/core/core_terms.csv
+shito,ˈʃito,core,food,,,,Ghanaian hot pepper sauce,data/core/core_terms.csv
+trotro,ˈtrotro,core,slang,,,,Commercial minibus taxi,data/core/core_terms.csv
+sakawa,ˌsakəˈwa,core,slang,,,,Internet fraud with rituals,data/core/core_terms.csv
+GES,dʒiː.iː.ˈɛs,core,institution,,,Ghana Education Service,,data/core/core_terms.csv
+WAEC,ˈwaek,core,institution,,,West African Examinations Council,,data/core/core_terms.csv
+Ahafo Region,aˈhafo ˈriːdʒən,places,region,,,,Current region,data/places/regions.csv
+Ashanti Region,aˈʃanti ˈriːdʒən,places,region,,,,Current region,data/places/regions.csv
+Bono Region,ˈbɔno ˈriːdʒən,places,region,,,,Current region,data/places/regions.csv
+Bono East Region,ˈbɔno iːst ˈriːdʒən,places,region,,,,Current region,data/places/regions.csv
+Brong Ahafo Region,brɔŋ aˈhafo ˈriːdʒən,places,region,,,,Legacy region,data/places/regions.csv
+Central Region,ˈsɛntrəl ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Eastern Region,ˈiːstən ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Greater Accra Region,ˈɡreɪtə əˈkraː ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Northern Region,ˈnɔːðən ˈriːdʒən,places,region,,,,,data/places/regions.csv
+North East Region,nɔːθ iːst ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Oti Region,ˈoti ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Savannah Region,saˈvænə ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Upper East Region,ˈʌpə iːst ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Upper West Region,ˈʌpə west ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Volta Region,ˈvɔlta ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Western Region,ˈwɛstən ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Western North Region,ˈwɛstən nɔːθ ˈriːdʒən,places,region,,,,,data/places/regions.csv
+Accra,əˈkraː,places,city,,,,Capital city,data/places/towns.csv
+Kumasi,kuˈmɑːsi,places,city,,,,Ashanti regional capital,data/places/towns.csv
+Tamale,ˈtamale,places,city,,,,Northern regional capital,data/places/towns.csv
+Sekondi-Takoradi,sɛˈkɔndi ˌtakɔˈradi,places,city,,,Twin City,Western regional capital,data/places/towns.csv
+Tema,ˈtɛma,places,city,,,,Harbour/industrial city,data/places/towns.csv
+Cape Coast,ˈkeɪp ˈkoʊst,places,city,,,,Central regional capital,data/places/towns.csv
+Koforidua,kɔfɔˈridua,places,city,,,,Eastern regional capital,data/places/towns.csv
+Ho,ho,places,city,,,,Volta regional capital,data/places/towns.csv
+Wa,wa,places,city,,,,Upper West regional capital,data/places/towns.csv
+Bolgatanga,ˌbɔlɡaˈtaŋɡa,places,city,,,Bolga,Upper East regional capital,data/places/towns.csv
+Sunyani,suˈɲani,places,city,,,,Bono regional capital,data/places/towns.csv
+Obuasi,oˈbwaːsi,places,city,,,,Mining town in Ashanti Region,data/places/towns.csv
+Takoradi,takɔˈradi,places,city,,,,Part of Sekondi-Takoradi,data/places/towns.csv
+Winneba,ˈwɪnɛba,places,city,,,,Coastal town in Central Region,data/places/towns.csv
+Agona Swedru,aˌɡɔna ˈswedru,places,city,,,,Major town in Central Region,data/places/towns.csv
+Ablekuma Central,ˌableˈkuma ˈsɛntrəl,places,constituency,Greater Accra,,,Urban constituency in Accra,data/places/constituencies.csv
+Ablekuma North,ˌableˈkuma nɔːθ,places,constituency,Greater Accra,,,Urban constituency in Accra,data/places/constituencies.csv
+Ablekuma West,ˌableˈkuma west,places,constituency,Greater Accra,,,Urban constituency including Dansoman,data/places/constituencies.csv
+Adenta,aˈdɛnta,places,constituency,Greater Accra,,,Suburban constituency near Accra,data/places/constituencies.csv
+Ashaiman,aˈʃaɪman,places,constituency,Greater Accra,,,Densely populated constituency near Tema,data/places/constituencies.csv
+Ho Central,ho ˈsɛntrəl,places,constituency,Volta,,,Constituency covering central Ho,data/places/constituencies.csv
+Keta,ˈkɛta,places,constituency,Volta,,,Coastal constituency,data/places/constituencies.csv
+Tamale Central,ˈtamale ˈsɛntrəl,places,constituency,Northern,,,Constituency in central Tamale,data/places/constituencies.csv
+Sunyani East,suˈɲani iːst,places,constituency,Bono,,,Constituency covering eastern Sunyani,data/places/constituencies.csv
+Sunyani West,suˈɲani west,places,constituency,Bono,,,Constituency covering western Sunyani,data/places/constituencies.csv
+Wa Central,wa ˈsɛntrəl,places,constituency,Upper West,,,Constituency around Wa township,data/places/constituencies.csv
+Bolgatanga Central,ˌbɔlɡaˈtaŋɡa ˈsɛntrəl,places,constituency,Upper East,,Bolga Central,Constituency around Bolgatanga,data/places/constituencies.csv
+Cape Coast South,ˈkeɪp ˈkoʊst saʊθ,places,constituency,Central,,,Southern part of Cape Coast,data/places/constituencies.csv
+Cape Coast North,ˈkeɪp ˈkoʊst nɔːθ,places,constituency,Central,,,Northern part of Cape Coast,data/places/constituencies.csv
+Kumasi Central,kuˈmɑːsi ˈsɛntrəl,places,constituency,Ashanti,,,Central Kumasi constituency,data/places/constituencies.csv
+Oforikrom,ˌɔfɔriˈkrɔm,places,constituency,Ashanti,,,Constituency in Kumasi area,data/places/constituencies.csv
+Tema East,ˈtɛma iːst,places,constituency,Greater Accra,,,Eastern part of Tema,data/places/constituencies.csv
+Tema West,ˈtɛma west,places,constituency,Greater Accra,,,Western part of Tema,data/places/constituencies.csv
+Nkoranza South,ŋkɔˈranza saʊθ,places,constituency,Bono East,,,Constituency in Bono East Region,data/places/constituencies.csv
+Techiman South,ˈtɛtʃiman saʊθ,places,constituency,Bono East,,,Constituency in Bono East Region,data/places/constituencies.csv
+Asante Kotoko,aˈsante kɔˈtɔkɔ,sports,football_club,,Kumasi,Kotoko,Top Ghanaian club based in Kumasi,data/sports/football_clubs.csv
+Hearts of Oak,ˈhɑːts əv oʊk,sports,football_club,,Accra,Accra Hearts of Oak,Historic club based in Accra,data/sports/football_clubs.csv
+Bibiani Gold Stars,bibiˈani ɡoʊld stɑːz,sports,football_club,,Bibiani,Gold Stars,Premier League club from Bibiani,data/sports/football_clubs.csv
+Aduana Stars,aˈdwana stɑːz,sports,football_club,,Dormaa,Aduana,Club based in Dormaa Ahenkro,data/sports/football_clubs.csv
+Medeama SC,meˈdɛama ɛsˈsiː,sports,football_club,,Tarkwa,Medeama,Club based in Tarkwa,data/sports/football_clubs.csv
+Samartex,ˈsamaˌtɛks,sports,football_club,,Samreboi,FC Samartex 1996,Premier League club based in Samreboi,data/sports/football_clubs.csv
+Nations FC,ˈneɪʃənz ɛfˈsiː,sports,football_club,,Kumasi,,Kumasi-based club,data/sports/football_clubs.csv
+Dreams FC,driːmz ɛfˈsiː,sports,football_club,,Dawu,,Club based in Dawu,data/sports/football_clubs.csv
+Bechem United,ˈbɛtʃem juːˈnaɪtɪd,sports,football_club,,Bechem,,Club based in Bechem,data/sports/football_clubs.csv
+Berekum Chelsea,ˌbɛrekum ˈtʃɛlsi,sports,football_club,,Berekum,,Club based in Berekum,data/sports/football_clubs.csv
+Karela United,kaˈrela juːˈnaɪtɪd,sports,football_club,,Anyinase,,Club based in Anyinase,data/sports/football_clubs.csv
+Accra Lions,əˈkraː ˈlaɪənz,sports,football_club,,Accra,,Premier League club from Accra,data/sports/football_clubs.csv
+Heart of Lions,hɑːt əv ˈlaɪənz,sports,football_club,,Kpando,Kpando Heart of Lions,Club based in Kpando,data/sports/football_clubs.csv
+Vision FC,ˈvɪʒən ɛfˈsiː,sports,football_club,,Accra,,Accra-based club,data/sports/football_clubs.csv
+Basake Holy Stars,baˈsake ˈhoʊli stɑːz,sports,football_club,,Basake,Holy Stars,Club based in Western Region,data/sports/football_clubs.csv
+Swedru All Blacks,ˈswedru ɔːl blæks,sports,football_club,,Swedru,All Blacks,Club based in Swedru,data/sports/football_clubs.csv
+Young Apostles,jʌŋ əˈpɔstəlz,sports,football_club,,Sunyani,,Club based in Sunyani,data/sports/football_clubs.csv
+Legon Cities,ˈleɡɔn ˈsɪtiz,sports,football_club,,Accra,,Club based in Accra,data/sports/football_clubs.csv
+Kwame Nkrumah,ˈkwame ŋˈkrumah,people,public_figure,,,Osagyefo,First President of Ghana and member of the Big Six,data/people/public_figures.csv
+J. B. Danquah,ˈdʒeɪ bi ˈdaŋkwa,people,public_figure,,,Joseph Boakye Danquah,Member of the Big Six,data/people/public_figures.csv
+Edward Akufo-Addo,ˈɛdwəd aˈkufo ˈado,people,public_figure,,,,Member of the Big Six and President of Ghana,data/people/public_figures.csv
+Emmanuel Obetsebi-Lamptey,eˈmanuɛl obeˈtʃebi ˈlampte,people,public_figure,,,,Member of the Big Six,data/people/public_figures.csv
+William Ofori Atta,ˈwɪljəm ɔˈfɔri ˈata,people,public_figure,,,Paa Willie,Member of the Big Six,data/people/public_figures.csv
+Ebenezer Ako-Adjei,ˌebɛˈniza ˈako adʒeɪ,people,public_figure,,,,Member of the Big Six,data/people/public_figures.csv
+Jerry John Rawlings,ˈdʒeri dʒɒn ˈrɔːlɪŋz,people,public_figure,,,Rawlings,Former President of Ghana,data/people/public_figures.csv
+John Agyekum Kufuor,ˈdʒɔn aˈdʒɛkum kuˈfɔː,people,public_figure,,,Kufuor,Former President of Ghana,data/people/public_figures.csv
+John Evans Atta Mills,ˈdʒɔn ˈevənz ˈata mɪlz,people,public_figure,,,Atta Mills,Former President of Ghana,data/people/public_figures.csv
+John Dramani Mahama,ˈdʒɔn draˈmani maˈhama,people,public_figure,,,Mahama,Former President of Ghana,data/people/public_figures.csv
+Nana Addo Dankwa Akufo-Addo,ˈnana ˈado ˈdaŋkwa aˈkufo ˈado,people,public_figure,,,Nana Akufo-Addo,Sitting or recent President of Ghana,data/people/public_figures.csv
+Tsatsu Tsikata,ˈtsatsu tsiˈkata,people,public_figure,,,,Prominent Ghanaian lawyer,data/people/public_figures.csv
+Martin Kpebu,ˈmatin ˈkpɛbu,people,public_figure,,,,Prominent lawyer and public commentator,data/people/public_figures.csv
+Georgina Theodora Wood,dʒɔːˈdʒina θiˈɔdɔra wʊd,people,public_figure,,,,Former Chief Justice of Ghana,data/people/public_figures.csv
+Sophia Akuffo,soˈfiːa aˈkufo,people,public_figure,,,,Former Chief Justice of Ghana,data/people/public_figures.csv
+Asamoah Gyan,ˌasamuˈa dʒan,people,public_figure,,,Baby Jet,Legendary Black Stars striker,data/people/public_figures.csv
+Michael Essien,ˈmaɪkəl ˈɛsiɛn,people,public_figure,,,,Former Black Stars midfielder,data/people/public_figures.csv
+Abedi Pele,aˈbedi ˈpele,people,public_figure,,,Abedi Ayew,Three-time African Footballer of the Year,data/people/public_figures.csv
+Andre Ayew,ˈandre ˈaɪjuː,people,public_figure,,,Dede Ayew,Black Stars captain,data/people/public_figures.csv
+Thomas Partey,ˈtɔmas ˈparte,people,public_figure,,,,Black Stars midfielder,data/people/public_figures.csv
+Dzigbordi,dʒiɡˈbɔːdi,people,personal_name,,,,Ewe/Ghanaian female name often mispronounced,data/people/complex_names.csv
+Dzifa,ˈdʒifa,people,personal_name,,,,Common Ewe given name,data/people/complex_names.csv
+Selorm,ˈsɛlɔm,people,personal_name,,,,Ewe given name,data/people/complex_names.csv
+Nii Ayikwei,niː aˈjikweɪ,people,personal_name,,,,Ga given name with title Nii,data/people/complex_names.csv
+Nii Armah,niː ˈama,people,personal_name,,,,Ga given name with title Nii,data/people/complex_names.csv
+Naa Dedei,naː deˈdeɪ,people,personal_name,,,,Ga female name,data/people/complex_names.csv
+Osei,ɔˈsɛ,people,personal_name,,,,Common Akan surname/given name,data/people/complex_names.csv
+Owusu,ɔˈwusu,people,personal_name,,,,Common Akan surname/given name,data/people/complex_names.csv
+Agyemang,adʒɛˈmaŋ,people,personal_name,,,,Common Akan surname,data/people/complex_names.csv
+Adwoa,ˈadʒwa,people,personal_name,,,,Akan female day name (Monday),data/people/complex_names.csv
+Afua,aˈfuːa,people,personal_name,,,,Akan female day name (Friday),data/people/complex_names.csv
+Akua,aˈkua,people,personal_name,,,,Akan female day name (Wednesday),data/people/complex_names.csv
+Kwadwo,ˈkwaʤo,people,personal_name,,,,Akan male day name (Monday),data/people/complex_names.csv
+Kwabena,ˈkwabena,people,personal_name,,,,Akan male day name (Tuesday),data/people/complex_names.csv
+Yaw,jaʊ,people,personal_name,,,,Akan male day name (Thursday),data/people/complex_names.csv
+Kwabena Agyapong,ˈkwabena adʒaˈpɔŋ,people,personal_name,,,,Ghanaian public figure; compound Akan name,data/people/complex_names.csv
+Zanetor Rawlings,ˈzanɛtɔ ˈrɔːlɪŋz,people,personal_name,,,,Ghanaian politician; daughter of J.J. Rawlings,data/people/complex_names.csv
