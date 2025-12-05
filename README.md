@@ -35,10 +35,12 @@ data/
 build/
   build_dictionary.py      # script to merge domain CSVs → unified dictionary
   generate_pls.py          # script to compile dictionary → PLS exports
+  generate_json.py         # script to export dictionary as JSON
 
 dist/
   dictionary/
-    ninolex_gh_dictionary.csv   # unified dictionary (auto-generated)
+    ninolex_gh_dictionary.csv    # unified dictionary (auto-generated)
+    ninolex_gh_dictionary.json   # JSON export (auto-generated)
 
 exports/
   # generated PLS files will be written here
@@ -48,11 +50,14 @@ exports/
 ### Dictionary view vs domain sources
 
 All canonical entries are maintained in domain-specific CSVs under `data/` (core terms, places, people, sports, etc.).
-These are merged into a single unified dictionary file:
+These are merged into a single unified dictionary file.
 
-- `dist/dictionary/ninolex_gh_dictionary.csv`
+The unified dictionary is available in both CSV and JSON formats:
 
-Tooling such as PLS and JSON exports read from this unified dictionary, so downstream users can treat Ninolex-GH as one dictionary, while maintainers still benefit from organized domain files.
+- CSV: `dist/dictionary/ninolex_gh_dictionary.csv`
+- JSON: `dist/dictionary/ninolex_gh_dictionary.json`
+
+Tooling such as PLS exports read from this unified dictionary, so downstream users can treat Ninolex-GH as one dictionary, while maintainers still benefit from organized domain files.
 
 To rebuild the dictionary:
 
@@ -64,4 +69,10 @@ To generate the PLS export (will auto-build dictionary if missing):
 
 ```bash
 python3 build/generate_pls.py
+```
+
+To generate the JSON export (will auto-build dictionary if missing):
+
+```bash
+python3 build/generate_json.py
 ```
