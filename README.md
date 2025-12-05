@@ -1,16 +1,81 @@
-# Ninolex GH – The Ghanaian Pronunciation Dictionary
+# Ninolex-GH
 
-**Ninolex GH** is an open, machine-readable pronunciation dictionary focused on **Ghanaian English and Ghanaian proper nouns**.
+**The open Ghanaian pronunciation dictionary for TTS, LLMs, and AI systems.**
 
-The goal is simple:
+---
 
-> Make text-to-speech systems pronounce Ghanaian names, places, schools, foods and institutions the way real Ghanaians do.
+## Overview
 
-This project is maintained by Ninobyte and the community, and is designed to be:
+Ninolex-GH is an open, machine-readable pronunciation dictionary focused on **Ghanaian English and Ghanaian proper nouns**. It provides IPA-based phonetic transcriptions designed to help text-to-speech engines, language models, and educational applications pronounce Ghanaian names, places, foods, and institutions correctly.
 
-- **LLM-friendly** – easy to consume from AI/ML pipelines  
-- **TTS-friendly** – exportable to W3C PLS (`.pls`) for engines like ElevenLabs  
-- **Country-scalable** – future variants like `Ninolex-NG`, `Ninolex-KE`, etc.
+### Use cases
+
+- **Text-to-speech (TTS)** – Upload the PLS export to engines like ElevenLabs for accurate Ghanaian pronunciation
+- **Large language models (LLMs)** – Use the JSON/CSV data to fine-tune or augment pronunciation-aware AI systems
+- **Educational apps** – Build language learning tools with correct Ghanaian phonetics
+- **Ghana-focused products** – Any application that needs to speak or process Ghanaian names properly
+
+### Design principles
+
+- **LLM-friendly** – Easy to consume from AI/ML pipelines
+- **TTS-friendly** – Exportable to W3C PLS (`.pls`) for speech engines
+- **Country-scalable** – Future variants like `Ninolex-NG`, `Ninolex-KE`, etc.
+
+---
+
+## Quick start – TTS / PLS (e.g. ElevenLabs)
+
+1. Clone the repository and build the PLS export:
+
+```bash
+git clone https://github.com/iamnortey/ninolex-gh.git
+cd ninolex-gh
+python3 build/build_dictionary.py
+python3 build/generate_pls.py
+```
+
+2. Upload `exports/ninolex_gh_core.pls` into your TTS engine as a pronunciation dictionary (e.g. in an ElevenLabs project).
+
+3. Attach the dictionary to a Ghana-focused voice or project, then generate audio that includes Ghanaian names, places, foods, and institutions.
+
+---
+
+## Quick start – Developers (JSON / data)
+
+You can consume Ninolex-GH as a data source in your own applications.
+
+### Option 1 – Git submodule
+
+```bash
+git submodule add https://github.com/iamnortey/ninolex-gh.git external/ninolex-gh
+```
+
+Then in a **TypeScript / JavaScript** project:
+
+```javascript
+import dictionary from "./external/ninolex-gh/dist/dictionary/ninolex_gh_dictionary.json";
+
+console.log(dictionary.length, "entries in Ninolex-GH");
+console.log(dictionary[0].grapheme, "→", dictionary[0].phoneme);
+```
+
+In **Python**:
+
+```python
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+path = root / "external" / "ninolex-gh" / "dist" / "dictionary" / "ninolex_gh_dictionary.json"
+
+data = json.loads(path.read_text(encoding="utf-8"))
+print(len(data), "entries loaded from Ninolex-GH")
+print(data[0]["grapheme"], "→", data[0]["phoneme"])
+```
+
+### Option 2 – Direct download
+
+Download the JSON or CSV directly from the repository and integrate into your build process.
 
 ---
 
@@ -19,23 +84,23 @@ This project is maintained by Ninobyte and the community, and is designed to be:
 ```text
 data/
   core/
-    core_terms.csv         # exams, institutions, food, slang, generic Ghana terms
+    core_terms.csv           # exams, institutions, foods, slang
   places/
-    regions.csv            # regions
-    towns.csv              # capitals + major towns
-    constituencies.csv     # electoral constituencies
+    regions.csv              # all 16 regions
+    towns.csv                # capitals and major towns
+    constituencies.csv       # electoral constituencies
   people/
-    public_figures.csv     # presidents, Big Six, judges, footballers
-    complex_names.csv      # Ghanaian names often mispronounced by TTS
+    public_figures.csv       # presidents, Big Six, judges, footballers
+    complex_names.csv        # Ghanaian names often mispronounced by TTS
   sports/
-    football_clubs.csv     # Ghana Premier League clubs
+    football_clubs.csv       # Ghana Premier League clubs
   education/
-    shs.csv                # secondary schools + nicknames (coming soon)
+    (coming soon)            # secondary schools and universities
 
 build/
-  build_dictionary.py      # script to merge domain CSVs → unified dictionary
-  generate_pls.py          # script to compile dictionary → PLS exports
-  generate_json.py         # script to export dictionary as JSON
+  build_dictionary.py        # merge domain CSVs → unified dictionary
+  generate_pls.py            # compile dictionary → PLS export
+  generate_json.py           # compile dictionary → JSON export
 
 dist/
   dictionary/
@@ -43,36 +108,50 @@ dist/
     ninolex_gh_dictionary.json   # JSON export (auto-generated)
 
 exports/
-  # generated PLS files will be written here
-  # e.g. ninolex_gh_core.pls
+  ninolex_gh_core.pls        # W3C PLS for TTS engines
 ```
 
-### Dictionary view vs domain sources
+---
 
-All canonical entries are maintained in domain-specific CSVs under `data/` (core terms, places, people, sports, etc.).
-These are merged into a single unified dictionary file.
+## Dictionary view vs domain sources
 
-The unified dictionary is available in both CSV and JSON formats:
+**Contributors** edit domain-specific CSV files under `data/` (core terms, places, people, sports, etc.).
+
+**Consumers** use the unified dictionary and exports:
 
 - CSV: `dist/dictionary/ninolex_gh_dictionary.csv`
 - JSON: `dist/dictionary/ninolex_gh_dictionary.json`
+- PLS: `exports/ninolex_gh_core.pls`
 
-Tooling such as PLS exports read from this unified dictionary, so downstream users can treat Ninolex-GH as one dictionary, while maintainers still benefit from organized domain files.
+The unified dictionary is generated by merging all domain CSVs. This lets maintainers organise entries by category while giving downstream users a single, consistent data source.
 
-To rebuild the dictionary:
+### Rebuild commands
 
 ```bash
+# Build unified dictionary (CSV)
 python3 build/build_dictionary.py
-```
 
-To generate the PLS export (will auto-build dictionary if missing):
+# Generate JSON export
+python3 build/generate_json.py
 
-```bash
+# Generate PLS export for TTS
 python3 build/generate_pls.py
 ```
 
-To generate the JSON export (will auto-build dictionary if missing):
+---
 
-```bash
-python3 build/generate_json.py
-```
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to propose changes, add new entries, and work with IPA for Ghanaian English.
+
+---
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for planned coverage (SHS names, constituencies, MPs, footballers, and more).
+
+---
+
+## License
+
+This project is licensed under the MIT License – see [LICENSE](LICENSE) for details.
