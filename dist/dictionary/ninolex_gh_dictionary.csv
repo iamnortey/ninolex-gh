@@ -2,7 +2,7 @@ grapheme,phoneme,domain,category,region,city,alias,notes,source_file
 WASSCE,ˈwasi,core,exam,,,,West African Senior School Certificate Examination,data/core/core_terms.csv
 BECE,ˈbiːsiː,core,exam,,,,Basic Education Certificate Examination,data/core/core_terms.csv
 waakye,ˈwa.tʃe,core,food,,,,Ghanaian rice and beans dish,data/core/core_terms.csv
-dumsor,ˈduːmsɔː,core,slang,,,,Power outages,data/core/core_terms.csv
+dumsor,ˈdum.sɔ,core,slang,,,,Power outages,data/core/core_terms.csv
 banku,ˈbaŋku,core,food,,,,Maize and cassava dough dish,data/core/core_terms.csv
 fufu,ˈfuːfuː,core,food,,,,Pounded cassava and plantain,data/core/core_terms.csv
 kenkey,ˈkɛŋkeɪ,core,food,,,,Fermented maize dumpling,data/core/core_terms.csv

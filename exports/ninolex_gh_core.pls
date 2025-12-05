@@ -4,7 +4,7 @@
   <lexeme><grapheme>WASSCE</grapheme><phoneme>ˈwasi</phoneme></lexeme>
   <lexeme><grapheme>BECE</grapheme><phoneme>ˈbiːsiː</phoneme></lexeme>
   <lexeme><grapheme>waakye</grapheme><phoneme>ˈwa.tʃe</phoneme></lexeme>
-  <lexeme><grapheme>dumsor</grapheme><phoneme>ˈduːmsɔː</phoneme></lexeme>
+  <lexeme><grapheme>dumsor</grapheme><phoneme>ˈdum.sɔ</phoneme></lexeme>
   <lexeme><grapheme>banku</grapheme><phoneme>ˈbaŋku</phoneme></lexeme>
   <lexeme><grapheme>fufu</grapheme><phoneme>ˈfuːfuː</phoneme></lexeme>
   <lexeme><grapheme>kenkey</grapheme><phoneme>ˈkɛŋkeɪ</phoneme></lexeme>
