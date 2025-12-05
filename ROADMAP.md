@@ -32,7 +32,7 @@ The long-term goal is to provide high-quality, machine-readable pronunciations f
 ### v0.2.0 – Education & geography expansion
 
 - Add full list of SHS names and common abbreviations
-- Add all 16 regions with richer metadata
+- Add richer metadata for regions and towns
 - Expand town coverage to more district capitals
 - Normalise IPA conventions for common name patterns (e.g. "Nii", "Osei", "Adwoa")
 
@@ -57,4 +57,3 @@ If you want to help:
 
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add new entries and follow IPA rules.
 - Open issues for specific gaps (e.g. "Add all schools in Ashanti Region", "Add Ewe given names").
-

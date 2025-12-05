@@ -120,11 +120,11 @@ Add a wider list of notable Black Stars and Black Queens players.
 
 Add a small Python CLI tool to query the unified dictionary from the terminal.
 
-- A script (for example under `tools/` or `cli/`) that:
+- A script (for example under `cli/` or `tools/`) that:
   - Loads `dist/dictionary/ninolex_gh_dictionary.json`
   - Accepts a search term (grapheme) and prints:
     - grapheme
     - phoneme
     - domain
-    - any notes
+    - notes
 - Document usage briefly in the README.

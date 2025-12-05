@@ -25,24 +25,26 @@ Ninolex-GH is an open, machine-readable pronunciation dictionary focused on **Gh
 
 ## Quick start – TTS / PLS (e.g. ElevenLabs)
 
-1. Clone the repository and build the PLS export:
+If you just want to improve Ghanaian pronunciations in a TTS engine:
 
-```bash
-git clone https://github.com/iamnortey/ninolex-gh.git
-cd ninolex-gh
-python3 build/build_dictionary.py
-python3 build/generate_pls.py
-```
+1. Clone the repository and build the dictionary and PLS export:
 
-2. Upload `exports/ninolex_gh_core.pls` into your TTS engine as a pronunciation dictionary (e.g. in an ElevenLabs project).
+   ```bash
+   git clone https://github.com/iamnortey/ninolex-gh.git
+   cd ninolex-gh
+   python3 build/build_dictionary.py
+   python3 build/generate_pls.py
+   ```
 
-3. Attach the dictionary to a Ghana-focused voice or project, then generate audio that includes Ghanaian names, places, foods, and institutions.
+2. Upload `exports/ninolex_gh_core.pls` into your TTS engine as a pronunciation dictionary (for example, in an ElevenLabs project dictionary).
+
+3. Attach the dictionary to your Ghana-focused voice or project and generate audio that includes Ghanaian names, places, foods and institutions.
 
 ---
 
 ## Quick start – Developers (JSON / data)
 
-You can consume Ninolex-GH as a data source in your own applications.
+You can consume Ninolex-GH directly in your applications.
 
 ### Option 1 – Git submodule
 
@@ -117,7 +119,9 @@ exports/
 
 **Contributors** edit domain-specific CSV files under `data/` (core terms, places, people, sports, etc.).
 
-**Consumers** use the unified dictionary and exports:
+**Consumers** use the unified dictionary and exports.
+
+The unified dictionary is available as:
 
 - CSV: `dist/dictionary/ninolex_gh_dictionary.csv`
 - JSON: `dist/dictionary/ninolex_gh_dictionary.json`
@@ -144,13 +148,9 @@ python3 build/generate_pls.py
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to propose changes, add new entries, and work with IPA for Ghanaian English.
 
----
-
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) for planned coverage (SHS names, constituencies, MPs, footballers, and more).
-
----
+See [ROADMAP.md](ROADMAP.md) for the planned coverage (schools, constituencies, public figures, footballers, and more).
 
 ## License
 

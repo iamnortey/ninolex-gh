@@ -11,13 +11,19 @@ Thank you for your interest in improving Ninolex-GH. This project is intended to
   - `data/places/` – regions, towns, constituencies
   - `data/sports/` – football clubs and sports-related entities
   - `data/people/` – public figures and complex personal names
+  - `data/education/` – secondary schools and related entities (planned)
+
 - **Unified dictionary**: built under `dist/dictionary/` via:
-  - `python3 build/build_dictionary.py`
+
+  ```bash
+  python3 build/build_dictionary.py
+  ```
+
 - **Exports**:
   - JSON: `dist/dictionary/ninolex_gh_dictionary.json`
   - PLS: `exports/ninolex_gh_core.pls`
 
-Contributors should **edit only the CSV files under `data/`**. The unified dictionary and exports are generated.
+Contributors should **edit only the CSV files under `data/`**. The unified dictionary and exports are generated artifacts.
 
 ---
 
@@ -27,9 +33,9 @@ Contributors should **edit only the CSV files under `data/`**. The unified dicti
 
 2. Create a **feature branch**, for example:
 
-```bash
-git checkout -b feature/add-ashanti-schools
-```
+   ```bash
+   git checkout -b feature/add-ashanti-schools
+   ```
 
 3. Edit the relevant CSV file(s) under `data/`:
    - Keep the header row unchanged.
@@ -38,13 +44,13 @@ git checkout -b feature/add-ashanti-schools
 
 4. Regenerate the dictionary and exports:
 
-```bash
-python3 build/build_dictionary.py
-python3 build/generate_json.py
-python3 build/generate_pls.py
-```
+   ```bash
+   python3 build/build_dictionary.py
+   python3 build/generate_json.py
+   python3 build/generate_pls.py
+   ```
 
-5. Optionally run any basic checks (e.g. ensure no obvious encoding issues or broken CSV syntax).
+5. Ensure there are no obvious encoding or formatting issues.
 
 6. Commit your changes and push your branch to your fork.
 
@@ -70,7 +76,7 @@ Ninolex-GH uses IPA (`alphabet="ipa"`) in the `phoneme` column.
 
 ---
 
-## Code and scripts
+## Modifying build scripts
 
 If you modify any of the Python build scripts under `build/`:
 
@@ -78,11 +84,11 @@ If you modify any of the Python build scripts under `build/`:
 - Make sure the scripts still run on a plain Python 3.x installation.
 - Test by re-running the three core commands:
 
-```bash
-python3 build/build_dictionary.py
-python3 build/generate_json.py
-python3 build/generate_pls.py
-```
+  ```bash
+  python3 build/build_dictionary.py
+  python3 build/generate_json.py
+  python3 build/generate_pls.py
+  ```
 
 ---
 
@@ -96,4 +102,3 @@ Use GitHub Issues to report:
 - Ideas for new features or exports
 
 Please include specific examples (grapheme, expected pronunciation, and any references) when reporting pronunciation issues.
-
