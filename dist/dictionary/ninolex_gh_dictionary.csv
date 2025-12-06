@@ -118,3 +118,35 @@ Kwabena,ˈkwabena,people,personal_name,,,,Akan male day name (Tuesday),data/peop
 Yaw,jaʊ,people,personal_name,,,,Akan male day name (Thursday),data/people/complex_names.csv
 Kwabena Agyapong,ˈkwabena adʒaˈpɔŋ,people,personal_name,,,,Ghanaian public figure; compound Akan name,data/people/complex_names.csv
 Zanetor Rawlings,ˈzanɛtɔ ˈrɔːlɪŋz,people,personal_name,,,,Ghanaian politician; daughter of J.J. Rawlings,data/people/complex_names.csv
+Presbyterian Boys' Secondary School,ˌprɛz.bɪˈtɛː.ri.ən bɔɪz ˈsek.ən.dri skuːl,education,shs,Greater Accra,Legon,PRESEC,Top-ranked boys' SHS in Legon,data/education/shs.csv
+Achimota School,aˈtʃi.mo.ta skuːl,education,shs,Greater Accra,Achimota,Motown,Historic co-ed SHS founded 1927,data/education/shs.csv
+Mfantsipim School,ˌmfan.tsiˈpim skuːl,education,shs,Central,Cape Coast,Mfantsipim,Historic boys' SHS founded 1876,data/education/shs.csv
+Wesley Girls' High School,ˈwez.li ɡɜːlz haɪ skuːl,education,shs,Central,Cape Coast,Wey Gey Hey,Top-ranked girls' SHS,data/education/shs.csv
+St. Augustine's College,seɪnt ɔːˈɡʌs.tɪnz ˈkɒ.lɪdʒ,education,shs,Central,Cape Coast,Augusco,Catholic boys' SHS in Cape Coast,data/education/shs.csv
+Holy Child School,ˈhoʊ.li tʃaɪld skuːl,education,shs,Central,Cape Coast,Holy Child,Catholic girls' SHS in Cape Coast,data/education/shs.csv
+Adisadel College,ˌa.di.saˈdɛl ˈkɒ.lɪdʒ,education,shs,Central,Cape Coast,Adisco,Historic boys' SHS founded 1910,data/education/shs.csv
+Opoku Ware School,ɔˈpɔ.ku ˈwa.re skuːl,education,shs,Ashanti,Kumasi,OWASS,Catholic boys' SHS in Kumasi,data/education/shs.csv
+Prempeh College,ˈprɛm.pe ˈkɒ.lɪdʒ,education,shs,Ashanti,Kumasi,Amanfoo,Top boys' SHS in Kumasi,data/education/shs.csv
+St. Louis Senior High School,seɪnt ˈluː.is ˈsiː.njə haɪ skuːl,education,shs,Ashanti,Kumasi,St. Louis,Catholic girls' SHS in Kumasi,data/education/shs.csv
+Yaa Asantewaa Girls' Senior High School,ˈjaː asan.teˈwaː ɡɜːlz ˈsiː.njə haɪ skuːl,education,shs,Ashanti,Kumasi,Yaaas,Girls' SHS named after Yaa Asantewaa,data/education/shs.csv
+Ghana Senior High School,ˈɡana ˈsiː.njə haɪ skuːl,education,shs,Greater Accra,Kokomlemle,Ghanass,Co-ed SHS in Accra,data/education/shs.csv
+Labone Senior High School,laˈboːne ˈsiː.njə haɪ skuːl,education,shs,Greater Accra,Labone,Labsec,Co-ed SHS in Accra,data/education/shs.csv
+Accra Academy,əˈkraː əˈkad.ə.mi,education,shs,Greater Accra,Bubiashie,Accra Aca,Boys' SHS in Accra,data/education/shs.csv
+Accra High School,əˈkraː haɪ skuːl,education,shs,Greater Accra,Kokomlemle,Accra High,Co-ed SHS in Accra,data/education/shs.csv
+Aburi Girls' Senior High School,aˈbu.ri ɡɜːlz ˈsiː.njə haɪ skuːl,education,shs,Eastern,Aburi,Abugiss,Girls' SHS in Aburi,data/education/shs.csv
+Pope John Senior High School,poʊp dʒɒn ˈsiː.njə haɪ skuːl,education,shs,Eastern,Koforidua,Pope John,Catholic co-ed SHS in Koforidua,data/education/shs.csv
+Tamale Senior High School,ˈtamale ˈsiː.njə haɪ skuːl,education,shs,Northern,Tamale,Tamasco,Top SHS in Northern Region,data/education/shs.csv
+Ghana Secondary Technical School,ˈɡana ˈsek.ən.dri ˈtek.nɪ.kəl skuːl,education,shs,Ashanti,Kumasi,Gee Sec Tech,Technical SHS in Kumasi,data/education/shs.csv
+Tema Secondary School,ˈtɛma ˈsek.ən.dri skuːl,education,shs,Greater Accra,Tema,Temasco,Co-ed SHS in Tema,data/education/shs.csv
+Mawuli School,maˈwu.li skuːl,education,shs,Volta,Ho,Mawuli,Co-ed SHS in Ho,data/education/shs.csv
+Navrongo Senior High School,naˈvrɔŋ.ɡo ˈsiː.njə haɪ skuːl,education,shs,Upper East,Navrongo,Navass,SHS in Upper East Region,data/education/shs.csv
+Bolgatanga Senior High School,ˌbɔl.ɡaˈtaŋ.ɡa ˈsiː.njə haɪ skuːl,education,shs,Upper East,Bolgatanga,Bigboss,SHS in Bolgatanga,data/education/shs.csv
+Wa Senior High School,wa ˈsiː.njə haɪ skuːl,education,shs,Upper West,Wa,Wass,SHS in Upper West Region,data/education/shs.csv
+Sunyani Senior High School,suˈɲani ˈsiː.njə haɪ skuːl,education,shs,Bono,Sunyani,Sunyanico,SHS in Sunyani,data/education/shs.csv
+University of Ghana,ˌjuː.nɪˈvɜː.sɪ.ti əv ˈɡana,education,university,Greater Accra,Legon,Legon,Flagship public university founded 1948,data/education/shs.csv
+Kwame Nkrumah University of Science and Technology,ˈkwame ŋˈkrumah ˌjuː.nɪˈvɜː.sɪ.ti əv ˈsaɪ.əns ænd tekˈnɒ.lə.dʒi,education,university,Ashanti,Kumasi,KNUST,Premier science and technology university,data/education/shs.csv
+University of Cape Coast,ˌjuː.nɪˈvɜː.sɪ.ti əv keɪp koʊst,education,university,Central,Cape Coast,UCC,Major public university in Cape Coast,data/education/shs.csv
+University of Education Winneba,ˌjuː.nɪˈvɜː.sɪ.ti əv ˌɛ.djʊˈkeɪ.ʃən ˈwɪ.nɛ.ba,education,university,Central,Winneba,UEW,Education-focused university,data/education/shs.csv
+University for Development Studies,ˌjuː.nɪˈvɜː.sɪ.ti fɔːr dɪˈvɛ.ləp.mənt ˈstʌ.diz,education,university,Northern,Tamale,UDS,University focused on development studies,data/education/shs.csv
+Ghana Institute of Management and Public Administration,ˈɡana ˈɪn.stɪ.tjuːt əv ˈmæ.nɪdʒ.mənt ænd ˈpʌb.lɪk ædˌmɪ.nɪˈstreɪ.ʃən,education,university,Greater Accra,Achimota,GIMPA,Graduate school for management and public admin,data/education/shs.csv
+Ashesi University,aˈʃɛ.si ˌjuː.nɪˈvɜː.sɪ.ti,education,university,Eastern,Berekuso,Ashesi,Private liberal arts university,data/education/shs.csv

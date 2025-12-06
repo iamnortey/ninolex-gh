@@ -120,5 +120,37 @@
   <lexeme><grapheme>Yaw</grapheme><phoneme>jaʊ</phoneme></lexeme>
   <lexeme><grapheme>Kwabena Agyapong</grapheme><phoneme>ˈkwabena adʒaˈpɔŋ</phoneme></lexeme>
   <lexeme><grapheme>Zanetor Rawlings</grapheme><phoneme>ˈzanɛtɔ ˈrɔːlɪŋz</phoneme></lexeme>
+  <lexeme><grapheme>Presbyterian Boys&apos; Secondary School</grapheme><phoneme>ˌprɛz.bɪˈtɛː.ri.ən bɔɪz ˈsek.ən.dri skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Achimota School</grapheme><phoneme>aˈtʃi.mo.ta skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Mfantsipim School</grapheme><phoneme>ˌmfan.tsiˈpim skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Wesley Girls&apos; High School</grapheme><phoneme>ˈwez.li ɡɜːlz haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>St. Augustine&apos;s College</grapheme><phoneme>seɪnt ɔːˈɡʌs.tɪnz ˈkɒ.lɪdʒ</phoneme></lexeme>
+  <lexeme><grapheme>Holy Child School</grapheme><phoneme>ˈhoʊ.li tʃaɪld skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Adisadel College</grapheme><phoneme>ˌa.di.saˈdɛl ˈkɒ.lɪdʒ</phoneme></lexeme>
+  <lexeme><grapheme>Opoku Ware School</grapheme><phoneme>ɔˈpɔ.ku ˈwa.re skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Prempeh College</grapheme><phoneme>ˈprɛm.pe ˈkɒ.lɪdʒ</phoneme></lexeme>
+  <lexeme><grapheme>St. Louis Senior High School</grapheme><phoneme>seɪnt ˈluː.is ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Yaa Asantewaa Girls&apos; Senior High School</grapheme><phoneme>ˈjaː asan.teˈwaː ɡɜːlz ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Ghana Senior High School</grapheme><phoneme>ˈɡana ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Labone Senior High School</grapheme><phoneme>laˈboːne ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Accra Academy</grapheme><phoneme>əˈkraː əˈkad.ə.mi</phoneme></lexeme>
+  <lexeme><grapheme>Accra High School</grapheme><phoneme>əˈkraː haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Aburi Girls&apos; Senior High School</grapheme><phoneme>aˈbu.ri ɡɜːlz ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Pope John Senior High School</grapheme><phoneme>poʊp dʒɒn ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Tamale Senior High School</grapheme><phoneme>ˈtamale ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Ghana Secondary Technical School</grapheme><phoneme>ˈɡana ˈsek.ən.dri ˈtek.nɪ.kəl skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Tema Secondary School</grapheme><phoneme>ˈtɛma ˈsek.ən.dri skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Mawuli School</grapheme><phoneme>maˈwu.li skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Navrongo Senior High School</grapheme><phoneme>naˈvrɔŋ.ɡo ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Bolgatanga Senior High School</grapheme><phoneme>ˌbɔl.ɡaˈtaŋ.ɡa ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Wa Senior High School</grapheme><phoneme>wa ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>Sunyani Senior High School</grapheme><phoneme>suˈɲani ˈsiː.njə haɪ skuːl</phoneme></lexeme>
+  <lexeme><grapheme>University of Ghana</grapheme><phoneme>ˌjuː.nɪˈvɜː.sɪ.ti əv ˈɡana</phoneme></lexeme>
+  <lexeme><grapheme>Kwame Nkrumah University of Science and Technology</grapheme><phoneme>ˈkwame ŋˈkrumah ˌjuː.nɪˈvɜː.sɪ.ti əv ˈsaɪ.əns ænd tekˈnɒ.lə.dʒi</phoneme></lexeme>
+  <lexeme><grapheme>University of Cape Coast</grapheme><phoneme>ˌjuː.nɪˈvɜː.sɪ.ti əv keɪp koʊst</phoneme></lexeme>
+  <lexeme><grapheme>University of Education Winneba</grapheme><phoneme>ˌjuː.nɪˈvɜː.sɪ.ti əv ˌɛ.djʊˈkeɪ.ʃən ˈwɪ.nɛ.ba</phoneme></lexeme>
+  <lexeme><grapheme>University for Development Studies</grapheme><phoneme>ˌjuː.nɪˈvɜː.sɪ.ti fɔːr dɪˈvɛ.ləp.mənt ˈstʌ.diz</phoneme></lexeme>
+  <lexeme><grapheme>Ghana Institute of Management and Public Administration</grapheme><phoneme>ˈɡana ˈɪn.stɪ.tjuːt əv ˈmæ.nɪdʒ.mənt ænd ˈpʌb.lɪk ædˌmɪ.nɪˈstreɪ.ʃən</phoneme></lexeme>
+  <lexeme><grapheme>Ashesi University</grapheme><phoneme>aˈʃɛ.si ˌjuː.nɪˈvɜː.sɪ.ti</phoneme></lexeme>
 
 </lexicon>
