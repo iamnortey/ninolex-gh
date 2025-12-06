@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Generate JSON export of the unified Ninolex-GH dictionary.
+
+Reads dist/dictionary/ninolex_gh_dictionary.csv and writes
+dist/dictionary/ninolex_gh_dictionary.json with proper UTF-8 encoding.
+"""
+
 from pathlib import Path
 import csv
 import json
@@ -22,11 +30,13 @@ def ensure_dictionary():
 def generate_json():
     """
     Read the unified dictionary CSV and export it as JSON.
+    Uses explicit UTF-8 encoding and proper newline handling.
     """
     ensure_dictionary()
 
     entries = []
-    with CSV_PATH.open(encoding="utf-8") as f:
+    # Use utf-8 encoding with newline="" for proper CSV handling
+    with CSV_PATH.open(encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             grapheme = row.get("grapheme", "").strip()
@@ -51,12 +61,13 @@ def generate_json():
             entries.append(entry)
 
     # Write JSON with UTF-8 encoding and readable formatting
+    # ensure_ascii=False preserves IPA characters correctly
     with JSON_PATH.open("w", encoding="utf-8") as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
 
     print(f"Wrote {JSON_PATH} with {len(entries)} entries")
+    return len(entries)
 
 
 if __name__ == "__main__":
     generate_json()
-

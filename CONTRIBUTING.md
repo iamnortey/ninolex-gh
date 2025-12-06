@@ -11,7 +11,7 @@ Thank you for your interest in improving Ninolex-GH. This project is intended to
   - `data/places/` – regions, towns, constituencies
   - `data/sports/` – football clubs and sports-related entities
   - `data/people/` – public figures and complex personal names
-  - `data/education/` – secondary schools and related entities (planned)
+  - `data/education/` – secondary schools, universities, and related entities
 
 - **Unified dictionary**: built under `dist/dictionary/` via:
 
@@ -50,7 +50,13 @@ Contributors should **edit only the CSV files under `data/`**. The unified dicti
    python3 build/generate_pls.py
    ```
 
-5. Ensure there are no obvious encoding or formatting issues.
+5. Run the IPA validation check:
+
+   ```bash
+   python3 tests/validate_ipa.py
+   ```
+
+   Fix any reported issues before submitting.
 
 6. Commit your changes and push your branch to your fork.
 
@@ -64,6 +70,8 @@ Contributors should **edit only the CSV files under `data/`**. The unified dicti
 
 Ninolex-GH uses IPA (`alphabet="ipa"`) in the `phoneme` column.
 
+> ⚠️ **Important**: Before adding or editing phoneme values, please read **[IPA_GUIDE.md](IPA_GUIDE.md)** and ensure your transcriptions follow the approved symbol set and conventions.
+
 ### General rules
 
 - Use consistent IPA notations for Ghanaian English vowels and consonants.
@@ -73,6 +81,21 @@ Ninolex-GH uses IPA (`alphabet="ipa"`) in the `phoneme` column.
   - `əˈkraː` for "Accra"
 - Avoid over-complicating phonetic detail; aim for a practical balance that TTS engines can use reliably.
 - If you are unsure about a particular name, open an issue or PR and explain your reasoning so maintainers can help refine the IPA.
+
+### Validation
+
+Maintainers will run:
+
+```bash
+python3 tests/validate_ipa.py
+```
+
+on all contributions. PRs may be blocked if they introduce:
+
+- Invalid or unapproved IPA characters
+- Inconsistent transcription conventions
+
+If you need a symbol not currently in the approved set, propose it in your PR with justification.
 
 ---
 
@@ -102,3 +125,9 @@ Use GitHub Issues to report:
 - Ideas for new features or exports
 
 Please include specific examples (grapheme, expected pronunciation, and any references) when reporting pronunciation issues.
+
+---
+
+## Code of conduct
+
+Be respectful and constructive. We welcome contributors of all backgrounds and experience levels.

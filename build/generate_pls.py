@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Generate W3C PLS (Pronunciation Lexicon Specification) export.
+
+Reads the unified dictionary and writes exports/ninolex_gh_core.pls
+for use with TTS engines like ElevenLabs.
+"""
+
 import csv
 from pathlib import Path
 
@@ -23,9 +31,12 @@ def load_entries_from_dictionary():
     """
     Load entries from the unified dictionary CSV.
     Returns a list of (grapheme, phoneme) tuples.
+    
+    Uses explicit UTF-8 encoding and proper newline handling.
     """
     entries = []
-    with DICTIONARY_PATH.open(encoding="utf-8") as f:
+    # Use utf-8 encoding with newline="" for proper CSV handling
+    with DICTIONARY_PATH.open(encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             grapheme = row.get("grapheme", "").strip()
@@ -36,8 +47,23 @@ def load_entries_from_dictionary():
     return entries
 
 
+def escape_xml(text):
+    """Escape special XML characters in text."""
+    return (
+        text
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("'", "&apos;")
+        .replace('"', "&quot;")
+    )
+
+
 def write_pls(entries, output_path, lang="en-GH"):
-    """Write entries to a W3C PLS file."""
+    """
+    Write entries to a W3C PLS file.
+    Uses explicit UTF-8 encoding for proper IPA character support.
+    """
     with output_path.open("w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write(
@@ -45,8 +71,10 @@ def write_pls(entries, output_path, lang="en-GH"):
             'xmlns="http://www.w3.org/2005/01/pronunciation-lexicon">\n\n'
         )
         for grapheme, phoneme in entries:
+            # Escape XML special characters in grapheme (phoneme should be clean IPA)
+            safe_grapheme = escape_xml(grapheme)
             f.write(
-                f'  <lexeme><grapheme>{grapheme}</grapheme>'
+                f'  <lexeme><grapheme>{safe_grapheme}</grapheme>'
                 f'<phoneme>{phoneme}</phoneme></lexeme>\n'
             )
         f.write('\n</lexicon>\n')
@@ -75,6 +103,7 @@ def build_core():
     out = EXPORTS_DIR / "ninolex_gh_core.pls"
     write_pls(entries, out)
     print(f"Wrote {out} with {len(entries)} entries")
+    return len(entries)
 
 
 if __name__ == "__main__":

@@ -81,6 +81,25 @@ Download the JSON or CSV directly from the repository and integrate into your bu
 
 ---
 
+## Pronunciation key (IPA subset)
+
+Ninolex-GH uses a practical subset of IPA for Ghanaian English. A few important symbols:
+
+| Symbol | Meaning | Example |
+|--------|---------|---------|
+| `ɛ` | Open-mid front vowel | "bed" |
+| `ɔ` | Open-mid back rounded vowel | Common in Ghanaian English |
+| `ŋ` | Velar nasal | "sing" |
+| `ʃ` | Voiceless postalveolar fricative | "ship" |
+| `tʃ` | Voiceless postalveolar affricate | "church" |
+| `dʒ` | Voiced postalveolar affricate | "judge" |
+| `ˈ` | Primary stress marker | Before the stressed syllable |
+| `.` | Syllable separator | For readability |
+
+For a complete overview of symbols and conventions, see **[IPA_GUIDE.md](IPA_GUIDE.md)**.
+
+---
+
 ## Repository structure
 
 ```text
@@ -97,7 +116,7 @@ data/
   sports/
     football_clubs.csv       # Ghana Premier League clubs
   education/
-    (coming soon)            # secondary schools and universities
+    shs.csv                  # secondary schools and universities
 
 build/
   build_dictionary.py        # merge domain CSVs → unified dictionary
@@ -111,13 +130,16 @@ dist/
 
 exports/
   ninolex_gh_core.pls        # W3C PLS for TTS engines
+
+tests/
+  validate_ipa.py            # IPA character validation
 ```
 
 ---
 
 ## Dictionary view vs domain sources
 
-**Contributors** edit domain-specific CSV files under `data/` (core terms, places, people, sports, etc.).
+**Contributors** edit domain-specific CSV files under `data/` (core terms, places, people, sports, education, etc.).
 
 **Consumers** use the unified dictionary and exports.
 
@@ -141,6 +163,20 @@ python3 build/generate_json.py
 # Generate PLS export for TTS
 python3 build/generate_pls.py
 ```
+
+---
+
+## Quality checks
+
+### IPA validation
+
+To verify that all phonemes use only approved IPA characters:
+
+```bash
+python3 tests/validate_ipa.py
+```
+
+This script checks the unified dictionary and reports any entries with invalid characters. See [IPA_GUIDE.md](IPA_GUIDE.md) for the approved symbol set.
 
 ---
 

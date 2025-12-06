@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Build the unified Ninolex-GH dictionary from domain-specific CSV sources.
+
+This script merges all CSV files under data/ into a single unified dictionary
+at dist/dictionary/ninolex_gh_dictionary.csv.
+"""
+
 import csv
 from pathlib import Path
 
@@ -7,6 +15,7 @@ DIST_DIR = ROOT / "dist"
 DICTIONARY_DIR = DIST_DIR / "dictionary"
 
 # Source files with their domain assignments
+# Add new domain CSVs here as they are created
 SOURCE_FILES = [
     ("data/core/core_terms.csv", "core"),
     ("data/places/regions.csv", "places"),
@@ -15,6 +24,7 @@ SOURCE_FILES = [
     ("data/sports/football_clubs.csv", "sports"),
     ("data/people/public_figures.csv", "people"),
     ("data/people/complex_names.csv", "people"),
+    ("data/education/shs.csv", "education"),
 ]
 
 # Unified dictionary schema
@@ -41,6 +51,9 @@ def load_and_normalize(csv_path, domain):
     """
     Load entries from a CSV and normalize them to the unified schema.
     Returns a list of dictionaries with DICTIONARY_FIELDS keys.
+    
+    Uses utf-8-sig encoding to handle BOMs from Excel exports,
+    and newline="" for proper cross-platform CSV handling.
     """
     entries = []
     full_path = ROOT / csv_path
@@ -48,7 +61,9 @@ def load_and_normalize(csv_path, domain):
     if not full_path.exists():
         return entries
 
-    with full_path.open(encoding="utf-8") as f:
+    # Use utf-8-sig to strip BOM if present (common in Excel exports)
+    # Use newline="" for proper CSV handling across platforms
+    with full_path.open(encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             grapheme = row.get("grapheme", "").strip()
@@ -91,7 +106,7 @@ def build_dictionary():
             all_entries.extend(entries)
             files_processed += 1
 
-    # Write unified dictionary
+    # Write unified dictionary with explicit UTF-8 encoding
     output_path = DICTIONARY_DIR / "ninolex_gh_dictionary.csv"
     with output_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=DICTIONARY_FIELDS)
@@ -104,4 +119,3 @@ def build_dictionary():
 
 if __name__ == "__main__":
     build_dictionary()
-
