@@ -18,7 +18,7 @@ The unified dictionary uses these fields:
 | `category` | string | No | Subcategory (e.g. "shs", "city", "public_figure") |
 | `region` | string | No | Ghana region (for places/institutions) |
 | `city` | string | No | City or town |
-| `alias` | string | No | Common abbreviation or nickname |
+| `alias` | string | No | Common abbreviation or nickname (semicolon-separated for multiples) |
 | `notes` | string | No | Additional context |
 | `source_file` | string | Auto | Path to source CSV (for traceability) |
 
@@ -56,9 +56,9 @@ TTS engines vary in their IPA support. By defining a conservative character set:
 
 ### Ghana-specific choices
 
-- **Labial-velars**: We use `kp` and `gb` (not `k͡p`, `ɡ͡b`) for readability
+- **Labial-velars**: We use `k͡p` and `ɡ͡b` (with tie-bars) to explicitly mark single articulations
 - **Affricates**: We use `tʃ` and `dʒ` (not `tɕ`, `dʑ`) for Ghanaian palatal sounds
-- **Stress marking**: Always mark primary stress with `ˈ` for polysyllabic words
+- **Stress marking**: Always mark primary stress with `ˈ` (U+02C8), never ASCII apostrophe
 - **Syllable dots**: Use `.` for readability, not phonological claims
 
 See [IPA_GUIDE.md](IPA_GUIDE.md) for the full convention set.
@@ -89,14 +89,50 @@ If we ever need dependencies (e.g. for advanced validation), we'll document them
 
 ---
 
-## Backwards compatibility
+## Versioning strategy (data vs code)
 
-Once we publish packages (PyPI, npm), backwards compatibility becomes critical:
+Ninolex-GH is primarily a **data project** with supporting build scripts.
+
+### The challenge
+
+Traditional SemVer (1.2.3) works well for software where "breaking changes" are API modifications. For a pronunciation dictionary:
+
+- Data changes (adding entries, fixing IPA) happen frequently
+- Code changes (build scripts, exporters) happen rarely
+- Consumers care most about **which snapshot of the lexicon** they're using
+
+### Our approach
+
+We are leaning towards a **CalVer-style** scheme for packaged releases:
+
+```
+2025.12.05   – Data snapshot from December 5, 2025
+2025.12.05.1 – Patch to the same day's snapshot (if needed)
+```
+
+This makes it immediately clear:
+
+- When the data was captured
+- That two versions from different dates have different data
+
+### Code vs data versioning
+
+- **Data snapshots**: CalVer (e.g. `2025.12.05`)
+- **Code-only changes**: May share the same data version with a patch suffix
+
+For example:
+
+- `2025.12.05` – Initial release with 151 entries
+- `2025.12.05.1` – Bug fix in `generate_pls.py`, same data
+- `2025.12.12` – New release with 180 entries
+
+### Backwards compatibility
+
+Once PyPI/npm packages exist:
 
 1. **Schema stability**: Core fields (`grapheme`, `phoneme`) will never change
 2. **Additive changes only**: New fields are optional; old consumers ignore them
-3. **Semantic versioning**: Breaking changes require major version bumps
-4. **Migration guides**: Any breaking change will include upgrade instructions
+3. **No data removal**: Existing entries may be corrected but not deleted without deprecation
 
 ---
 
@@ -123,6 +159,18 @@ If we build a hosted API:
 4. **SSML output**: Primary use case is generating SSML for TTS
 
 This is a long-term vision, not a v0.x commitment.
+
+---
+
+## Quality tooling philosophy
+
+Ninolex-GH includes internal quality tools under `tests/` and `tools/`:
+
+- **`tests/validate_ipa.py`**: Validates IPA character set and conventions
+- **`tools/coverage_check.py`**: Estimates dictionary coverage against sample text
+- **`tools/golden_100_template.txt`**: Template for high-priority reference entries
+
+These tools are for **maintainer use**, not shipped as part of the dictionary data. They help ensure quality without adding complexity for consumers.
 
 ---
 

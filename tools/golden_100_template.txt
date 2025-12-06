@@ -1,0 +1,141 @@
+# Golden 100 Template
+# ====================
+#
+# This file will list 100 high-priority entries (graphemes) that should have:
+# - Human-verified IPA transcriptions
+# - Optional: reference audio recordings for pronunciation validation
+#
+# Selection criteria:
+# - High frequency in Ghanaian news and formal speech
+# - Commonly mispronounced by TTS engines
+# - Representative of different language families (Akan, Ewe, Ga, etc.)
+# - Mix of categories (places, names, institutions, foods, etc.)
+#
+# Format: One grapheme per line. Comments start with #.
+#
+# Status: TEMPLATE - entries to be curated
+#
+# ====================
+
+# === PLACES (20) ===
+Accra
+Kumasi
+Tamale
+Tema
+Takoradi
+Cape Coast
+Sunyani
+Ho
+Koforidua
+Bolgatanga
+Wa
+Navrongo
+Nungua
+Osu
+Madina
+Kpando
+Mampong
+Ashaiman
+Teshie
+Kasoa
+
+# === PERSONAL NAMES (20) ===
+Kwame
+Kofi
+Ama
+Akua
+Yaw
+Adjoa
+Adwoa
+Kweku
+Efua
+Dzigbordi
+Nii
+Osei
+Asante
+Mensah
+Owusu
+Nkrumah
+Danquah
+Addo
+Asamoah
+Opoku
+
+# === INSTITUTIONS (15) ===
+PRESEC
+Achimota
+Mfantsipim
+KNUST
+Legon
+WAEC
+GES
+GBC
+COCOBOD
+GNPC
+ECG
+SSNIT
+NHIS
+GRA
+BECE
+
+# === FOODS & CULTURE (15) ===
+waakye
+banku
+fufu
+kenkey
+jollof
+kelewele
+shito
+sobolo
+tuo zaafi
+ampesi
+redred
+chinchinga
+kontomire
+groundnut
+palm wine
+
+# === SLANG & MODERN TERMS (10) ===
+dumsor
+sakawa
+trotro
+okada
+chale
+akwaaba
+sankofa
+adinkra
+kente
+highlife
+
+# === PUBLIC FIGURES (10) ===
+Nana Akufo-Addo
+John Mahama
+Jerry Rawlings
+Kwame Nkrumah
+Kofi Annan
+Asamoah Gyan
+Michael Essien
+Abedi Pele
+Osagyefo
+Otumfuo
+
+# === SPORTS (10) ===
+Asante Kotoko
+Hearts of Oak
+Black Stars
+Black Queens
+Ohene Djan
+Asamoah Gyan
+Abedi Pele
+Sulley Muntari
+Andre Ayew
+Thomas Partey
+
+# ====================
+# Total: 100 entries (some overlap across categories expected)
+#
+# Next steps:
+# 1. Verify all 100 are in the dictionary
+# 2. Review IPA transcriptions for accuracy
+# 3. Consider recording reference audio
+# ====================

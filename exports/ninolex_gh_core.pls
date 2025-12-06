@@ -95,7 +95,7 @@
   <lexeme><grapheme>John Dramani Mahama</grapheme><phoneme>ˈdʒɔn draˈmani maˈhama</phoneme></lexeme>
   <lexeme><grapheme>Nana Addo Dankwa Akufo-Addo</grapheme><phoneme>ˈnana ˈado ˈdaŋkwa aˈkufo ˈado</phoneme></lexeme>
   <lexeme><grapheme>Tsatsu Tsikata</grapheme><phoneme>ˈtsatsu tsiˈkata</phoneme></lexeme>
-  <lexeme><grapheme>Martin Kpebu</grapheme><phoneme>ˈmatin ˈkpɛbu</phoneme></lexeme>
+  <lexeme><grapheme>Martin Kpebu</grapheme><phoneme>ˈmatin ˈk͡pɛbu</phoneme></lexeme>
   <lexeme><grapheme>Georgina Theodora Wood</grapheme><phoneme>dʒɔːˈdʒina θiˈɔdɔra wʊd</phoneme></lexeme>
   <lexeme><grapheme>Sophia Akuffo</grapheme><phoneme>soˈfiːa aˈkufo</phoneme></lexeme>
   <lexeme><grapheme>Asamoah Gyan</grapheme><phoneme>ˌasamuˈa dʒan</phoneme></lexeme>
@@ -115,7 +115,7 @@
   <lexeme><grapheme>Adwoa</grapheme><phoneme>ˈadʒwa</phoneme></lexeme>
   <lexeme><grapheme>Afua</grapheme><phoneme>aˈfuːa</phoneme></lexeme>
   <lexeme><grapheme>Akua</grapheme><phoneme>aˈkua</phoneme></lexeme>
-  <lexeme><grapheme>Kwadwo</grapheme><phoneme>ˈkwaʤo</phoneme></lexeme>
+  <lexeme><grapheme>Kwadwo</grapheme><phoneme>ˈkwadʒo</phoneme></lexeme>
   <lexeme><grapheme>Kwabena</grapheme><phoneme>ˈkwabena</phoneme></lexeme>
   <lexeme><grapheme>Yaw</grapheme><phoneme>jaʊ</phoneme></lexeme>
   <lexeme><grapheme>Kwabena Agyapong</grapheme><phoneme>ˈkwabena adʒaˈpɔŋ</phoneme></lexeme>

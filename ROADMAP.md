@@ -25,8 +25,9 @@ The long-term goal is to provide high-quality, machine-readable pronunciations f
 - **Seed set of SHS and universities** (new)
 - Unified dictionary export (CSV + JSON)
 - PLS export for TTS engines
-- **IPA validation tooling** (new)
-- **IPA style guide** (new)
+- **IPA validation tooling with tie-bar checks** (enhanced)
+- **IPA style guide with accent policy** (enhanced)
+- **Quality tooling stubs** (coverage check, Golden 100 template)
 
 ---
 
@@ -39,6 +40,7 @@ The long-term goal is to provide high-quality, machine-readable pronunciations f
 - Expand town coverage to more district capitals
 - Normalise IPA conventions for common name patterns (e.g. "Nii", "Osei", "Adwoa")
 - Improve IPA validation with more comprehensive character checks
+- Begin populating the "Golden 100" reference list
 
 ### v0.3.0 – Politics & governance
 
@@ -89,6 +91,12 @@ Any schema changes will be additive. Existing fields (`grapheme`, `phoneme`, `do
 
 ## Packaging & distribution (future)
 
+### Versioning scheme
+
+- Define and adopt a **CalVer-style versioning scheme** (e.g. `2025.12.05`) for packaged releases so that data snapshots are clearly identifiable
+- Code-only changes may share the same data version with a patch suffix (e.g. `2025.12.05.1`)
+- See [DESIGN_NOTES.md](DESIGN_NOTES.md) for rationale
+
 ### PyPI package
 
 A Python package (`ninolex-gh`) exposing:
@@ -119,7 +127,28 @@ npm install ninolex-gh
 
 ### Versioned releases
 
-Each package version would correspond to a tagged Git release (e.g. `v0.2.0`).
+Each package version would correspond to a tagged Git release using CalVer.
+
+---
+
+## Quality & coverage tooling (future)
+
+### Golden 100
+
+A curated list of 100 high-priority entries that should have:
+
+- Human-verified IPA transcriptions
+- Optional: reference audio recordings for pronunciation validation
+
+Template available at `tools/golden_100_template.txt`.
+
+### Coverage estimation
+
+A script (`tools/coverage_check.py`) to estimate dictionary coverage against sample Ghanaian news text. Helps identify gaps in coverage.
+
+### Audio reference (long-term)
+
+Future consideration: recording reference audio for Golden 100 entries to validate TTS output quality.
 
 ---
 

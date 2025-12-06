@@ -6,6 +6,25 @@ The goal is **practical TTS correctness**, not academic phonetic perfection. We 
 
 ---
 
+## Target accent and scope
+
+Ninolex-GH encodes pronunciations in **formal Ghanaian English** – roughly the accent you would hear from a newsreader on national TV/radio (e.g. GBC, Joy News, Citi FM).
+
+For local names (Twi, Ga, Ewe, etc.), we aim to capture how they are pronounced **in this register**, not in fully localized vernacular speech. The goal is practical intelligibility for TTS and educational tools, not a full phonological description of every Ghanaian language.
+
+### Anglicized vs local forms
+
+When there is a strong Anglicized form versus a local form (e.g. "Osei", "Accra"), prefer the form actually used by educated Ghanaian English speakers in formal contexts.
+
+If both are relevant, you may:
+
+- Use the main `grapheme` for the dominant formal pronunciation
+- Use `alias` or `notes` to document alternative vernacular forms (for future expansion)
+
+Example: "Osei" might be pronounced slightly differently in rural Ashanti Twi versus formal Ghanaian English on a news broadcast. We encode the latter.
+
+---
+
 ## Accent baseline
 
 Ninolex-GH uses **Ghanaian English** as the baseline accent, with influences from:
@@ -96,14 +115,16 @@ Transcribe diphthongs as vowel sequences:
 
 #### Labial-velars
 
-Ghanaian languages feature labial-velar consonants. Transcribe these as:
+Ghanaian languages feature labial-velar consonants. These are **single articulations**, not sequences.
 
 | Symbol | Example | Notes |
 |--------|---------|-------|
-| `kp` | "Kpando" | Voiceless labial-velar plosive |
-| `gb` | "Agbogbloshie" | Voiced labial-velar plosive |
+| `k͡p` | "Kpando" | Voiceless labial-velar plosive |
+| `ɡ͡b` | "Agbogbloshie" | Voiced labial-velar plosive |
 
-Optionally use the tie bar (`k͡p`, `ɡ͡b`) for explicit notation, but `kp` and `gb` are acceptable for readability.
+**Convention**: Use the tie bar (`k͡p`, `ɡ͡b`) to explicitly mark these as single segments. The validator will warn if bare `kp` or `gb` sequences are found without tie-bars.
+
+Alternative tie-bar: `͜` (U+035C) is also acceptable: `k͜p`, `ɡ͜b`.
 
 #### Palatal nasal
 
@@ -111,21 +132,36 @@ Optionally use the tie bar (`k͡p`, `ɡ͡b`) for explicit notation, but `kp` and
 |--------|---------|-------|
 | `ɲ` | "Sunyani" | Palatal nasal (like Spanish "ñ") |
 
+### Syllabic consonants and difficult clusters
+
+Names like "Nkansah" and "Mampong" can involve syllabic nasals or implied vowels.
+
+For now, Ninolex-GH uses a practical approach for TTS:
+
+- We may prefer slightly "smoothed" pronunciations that TTS engines can handle reliably
+- Where syllabic consonants are clearly needed, we use the IPA syllabic marker `̩` (combining vertical line below)
+
+Example: A syllabic `n` would be written as `n̩`.
+
+Contributors should follow existing patterns in the dictionary and, when in doubt, open an issue for discussion.
+
 ---
 
 ## Stress and syllabification
 
 ### Primary stress
 
-Mark primary stress with `ˈ` **before** the stressed syllable:
+Mark primary stress with `ˈ` (U+02C8) **before** the stressed syllable:
 
 - `əˈkraː` – Accra
 - `kuˈmɑːsi` – Kumasi
 - `ˈdum.sɔ` – dumsor
 
+**Important**: Do NOT use the ASCII apostrophe `'` (U+0027). The validator will reject it.
+
 ### Secondary stress (optional)
 
-Use `ˌ` for secondary stress in longer words:
+Use `ˌ` (U+02CC) for secondary stress in longer words:
 
 - `ˌableˈkuma` – Ablekuma
 
@@ -153,6 +189,7 @@ This is for **readability**, not a strict phonological claim. Use dots where the
 | Adwoa | `ˈadʒwa` | Akan female day name (Monday) |
 | Dzigbordi | `dʒiɡˈbɔːdi` | Ewe female name |
 | PRESEC | `ˈprɛsɛk` | Presbyterian Boys' Secondary School |
+| Kpando | `k͡panˈdo` | Town in Volta Region (labial-velar) |
 
 ---
 
@@ -164,7 +201,12 @@ All phoneme values are validated using:
 python3 tests/validate_ipa.py
 ```
 
-This script checks that only approved IPA characters are used. If you need to add a new symbol, update both this guide and the `ALLOWED_CHARS` set in `tests/validate_ipa.py`.
+This script performs two checks:
+
+1. **Character validation**: Ensures only approved IPA characters are used
+2. **Tie-bar check**: Warns about labial-velar sequences (`kp`, `gb`) that lack tie-bars
+
+If you need to add a new symbol, update both this guide and the `ALLOWED_CHARS` set in `tests/validate_ipa.py`.
 
 ---
 
@@ -172,7 +214,9 @@ This script checks that only approved IPA characters are used. If you need to ad
 
 1. Read this guide before adding or editing phoneme values.
 2. Use consistent symbols from the approved set.
-3. When uncertain, open an issue or PR with your reasoning.
-4. Maintainers may run `python3 tests/validate_ipa.py` on contributions.
+3. For labial-velars, always use tie-bars: `k͡p`, `ɡ͡b`.
+4. Use `ˈ` (U+02C8) for stress, never `'` (U+0027).
+5. When uncertain, open an issue or PR with your reasoning.
+6. Maintainers will run `python3 tests/validate_ipa.py` on contributions.
 
 For more details on the contribution workflow, see [CONTRIBUTING.md](CONTRIBUTING.md).

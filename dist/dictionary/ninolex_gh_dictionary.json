@@ -1035,7 +1035,7 @@
   },
   {
     "grapheme": "Martin Kpebu",
-    "phoneme": "ˈmatin ˈkpɛbu",
+    "phoneme": "ˈmatin ˈk͡pɛbu",
     "domain": "people",
     "category": "public_figure",
     "region": "",
@@ -1255,7 +1255,7 @@
   },
   {
     "grapheme": "Kwadwo",
-    "phoneme": "ˈkwaʤo",
+    "phoneme": "ˈkwadʒo",
     "domain": "people",
     "category": "personal_name",
     "region": "",
@@ -1326,7 +1326,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Achimota",
-    "alias": "Motown",
+    "alias": "Motown;Achimota",
     "notes": "Historic co-ed SHS founded 1927",
     "source_file": "data/education/shs.csv"
   },
@@ -1337,7 +1337,7 @@
     "category": "shs",
     "region": "Central",
     "city": "Cape Coast",
-    "alias": "Mfantsipim",
+    "alias": "Mfantsipim;Botwe",
     "notes": "Historic boys' SHS founded 1876",
     "source_file": "data/education/shs.csv"
   },
@@ -1348,7 +1348,7 @@
     "category": "shs",
     "region": "Central",
     "city": "Cape Coast",
-    "alias": "Wey Gey Hey",
+    "alias": "Wey Gey Hey;WGHS",
     "notes": "Top-ranked girls' SHS",
     "source_file": "data/education/shs.csv"
   },
@@ -1359,7 +1359,7 @@
     "category": "shs",
     "region": "Central",
     "city": "Cape Coast",
-    "alias": "Augusco",
+    "alias": "Augusco;Saint Augustine's College",
     "notes": "Catholic boys' SHS in Cape Coast",
     "source_file": "data/education/shs.csv"
   },
@@ -1370,7 +1370,7 @@
     "category": "shs",
     "region": "Central",
     "city": "Cape Coast",
-    "alias": "Holy Child",
+    "alias": "Holy Child;HCS",
     "notes": "Catholic girls' SHS in Cape Coast",
     "source_file": "data/education/shs.csv"
   },
@@ -1392,7 +1392,7 @@
     "category": "shs",
     "region": "Ashanti",
     "city": "Kumasi",
-    "alias": "OWASS",
+    "alias": "OWASS;Akatakyie",
     "notes": "Catholic boys' SHS in Kumasi",
     "source_file": "data/education/shs.csv"
   },
@@ -1414,7 +1414,7 @@
     "category": "shs",
     "region": "Ashanti",
     "city": "Kumasi",
-    "alias": "St. Louis",
+    "alias": "Saint Louis;St Louis",
     "notes": "Catholic girls' SHS in Kumasi",
     "source_file": "data/education/shs.csv"
   },
@@ -1425,7 +1425,7 @@
     "category": "shs",
     "region": "Ashanti",
     "city": "Kumasi",
-    "alias": "Yaaas",
+    "alias": "Yaaas;YAGSS",
     "notes": "Girls' SHS named after Yaa Asantewaa",
     "source_file": "data/education/shs.csv"
   },
@@ -1436,7 +1436,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Kokomlemle",
-    "alias": "Ghanass",
+    "alias": "Ghanass;GSHS",
     "notes": "Co-ed SHS in Accra",
     "source_file": "data/education/shs.csv"
   },
@@ -1447,7 +1447,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Labone",
-    "alias": "Labsec",
+    "alias": "Labsec;LSHS",
     "notes": "Co-ed SHS in Accra",
     "source_file": "data/education/shs.csv"
   },
@@ -1458,7 +1458,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Bubiashie",
-    "alias": "Accra Aca",
+    "alias": "Accra Aca;Bleoo",
     "notes": "Boys' SHS in Accra",
     "source_file": "data/education/shs.csv"
   },
@@ -1469,7 +1469,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Kokomlemle",
-    "alias": "Accra High",
+    "alias": "Accra High;AHS",
     "notes": "Co-ed SHS in Accra",
     "source_file": "data/education/shs.csv"
   },
@@ -1480,7 +1480,7 @@
     "category": "shs",
     "region": "Eastern",
     "city": "Aburi",
-    "alias": "Abugiss",
+    "alias": "Abugiss;AGSHS",
     "notes": "Girls' SHS in Aburi",
     "source_file": "data/education/shs.csv"
   },
@@ -1491,7 +1491,7 @@
     "category": "shs",
     "region": "Eastern",
     "city": "Koforidua",
-    "alias": "Pope John",
+    "alias": "Pope John;POJOSS",
     "notes": "Catholic co-ed SHS in Koforidua",
     "source_file": "data/education/shs.csv"
   },
@@ -1513,7 +1513,7 @@
     "category": "shs",
     "region": "Ashanti",
     "city": "Kumasi",
-    "alias": "Gee Sec Tech",
+    "alias": "Gee Sec Tech;GSTS",
     "notes": "Technical SHS in Kumasi",
     "source_file": "data/education/shs.csv"
   },
@@ -1524,7 +1524,7 @@
     "category": "shs",
     "region": "Greater Accra",
     "city": "Tema",
-    "alias": "Temasco",
+    "alias": "Temasco;TSS",
     "notes": "Co-ed SHS in Tema",
     "source_file": "data/education/shs.csv"
   },
@@ -1546,7 +1546,7 @@
     "category": "shs",
     "region": "Upper East",
     "city": "Navrongo",
-    "alias": "Navass",
+    "alias": "Navass;NSHS",
     "notes": "SHS in Upper East Region",
     "source_file": "data/education/shs.csv"
   },
@@ -1557,7 +1557,7 @@
     "category": "shs",
     "region": "Upper East",
     "city": "Bolgatanga",
-    "alias": "Bigboss",
+    "alias": "Bigboss;BSHS",
     "notes": "SHS in Bolgatanga",
     "source_file": "data/education/shs.csv"
   },
@@ -1568,7 +1568,7 @@
     "category": "shs",
     "region": "Upper West",
     "city": "Wa",
-    "alias": "Wass",
+    "alias": "Wass;WSHS",
     "notes": "SHS in Upper West Region",
     "source_file": "data/education/shs.csv"
   },
@@ -1579,7 +1579,7 @@
     "category": "shs",
     "region": "Bono",
     "city": "Sunyani",
-    "alias": "Sunyanico",
+    "alias": "Sunyanico;SSHS",
     "notes": "SHS in Sunyani",
     "source_file": "data/education/shs.csv"
   },
@@ -1590,7 +1590,7 @@
     "category": "university",
     "region": "Greater Accra",
     "city": "Legon",
-    "alias": "Legon",
+    "alias": "Legon;UG",
     "notes": "Flagship public university founded 1948",
     "source_file": "data/education/shs.csv"
   },
@@ -1602,7 +1602,7 @@
     "region": "Ashanti",
     "city": "Kumasi",
     "alias": "KNUST",
-    "notes": "Premier science and technology university",
+    "notes": "Premier science and technology university. KNUST pronounced as word: nuːst",
     "source_file": "data/education/shs.csv"
   },
   {
@@ -1613,7 +1613,7 @@
     "region": "Central",
     "city": "Cape Coast",
     "alias": "UCC",
-    "notes": "Major public university in Cape Coast",
+    "notes": "Major public university. UCC typically spelled out: juː siː siː",
     "source_file": "data/education/shs.csv"
   },
   {
@@ -1624,7 +1624,7 @@
     "region": "Central",
     "city": "Winneba",
     "alias": "UEW",
-    "notes": "Education-focused university",
+    "notes": "Education-focused university. UEW typically spelled out",
     "source_file": "data/education/shs.csv"
   },
   {
@@ -1635,7 +1635,7 @@
     "region": "Northern",
     "city": "Tamale",
     "alias": "UDS",
-    "notes": "University focused on development studies",
+    "notes": "Development studies university. UDS typically spelled out",
     "source_file": "data/education/shs.csv"
   },
   {
@@ -1646,7 +1646,7 @@
     "region": "Greater Accra",
     "city": "Achimota",
     "alias": "GIMPA",
-    "notes": "Graduate school for management and public admin",
+    "notes": "Graduate school. GIMPA pronounced as word: ɡɪmpa",
     "source_file": "data/education/shs.csv"
   },
   {
