@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ninolex-gh"
+version = "0.1.0"
+description = "Canonical Ghanaian pronunciation dictionary (Ninolex-GH)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Isaac Nortey" }
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/iamnortey/ninolex-gh"
+Source = "https://github.com/iamnortey/ninolex-gh"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"ninolex_gh.data" = ["*.json"]

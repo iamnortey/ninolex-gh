@@ -1,0 +1,206 @@
+Metadata-Version: 2.4
+Name: ninolex-gh
+Version: 0.1.0
+Summary: Canonical Ghanaian pronunciation dictionary (Ninolex-GH)
+Author: Isaac Nortey
+License: MIT
+Project-URL: Homepage, https://github.com/iamnortey/ninolex-gh
+Project-URL: Source, https://github.com/iamnortey/ninolex-gh
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Ninolex-GH
+
+**The open Ghanaian pronunciation dictionary for TTS, LLMs, and AI systems.**
+
+---
+
+## Overview
+
+Ninolex-GH is an open, machine-readable pronunciation dictionary focused on **Ghanaian English and Ghanaian proper nouns**. It provides IPA-based phonetic transcriptions designed to help text-to-speech engines, language models, and educational applications pronounce Ghanaian names, places, foods, and institutions correctly.
+
+### Use cases
+
+- **Text-to-speech (TTS)** – Upload the PLS export to engines like ElevenLabs for accurate Ghanaian pronunciation
+- **Large language models (LLMs)** – Use the JSON/CSV data to fine-tune or augment pronunciation-aware AI systems
+- **Educational apps** – Build language learning tools with correct Ghanaian phonetics
+- **Ghana-focused products** – Any application that needs to speak or process Ghanaian names properly
+
+### Design principles
+
+- **LLM-friendly** – Easy to consume from AI/ML pipelines
+- **TTS-friendly** – Exportable to W3C PLS (`.pls`) for speech engines
+- **Country-scalable** – Future variants like `Ninolex-NG`, `Ninolex-KE`, etc.
+
+---
+
+## Quick start – TTS / PLS (e.g. ElevenLabs)
+
+If you just want to improve Ghanaian pronunciations in a TTS engine:
+
+1. Clone the repository and build the dictionary and PLS export:
+
+   ```bash
+   git clone https://github.com/iamnortey/ninolex-gh.git
+   cd ninolex-gh
+   python3 build/build_dictionary.py
+   python3 build/generate_pls.py
+   ```
+
+2. Upload `exports/ninolex_gh_core.pls` into your TTS engine as a pronunciation dictionary (for example, in an ElevenLabs project dictionary).
+
+3. Attach the dictionary to your Ghana-focused voice or project and generate audio that includes Ghanaian names, places, foods and institutions.
+
+---
+
+## Quick start – Developers (JSON / data)
+
+You can consume Ninolex-GH directly in your applications.
+
+### Option 1 – Git submodule
+
+```bash
+git submodule add https://github.com/iamnortey/ninolex-gh.git external/ninolex-gh
+```
+
+Then in a **TypeScript / JavaScript** project:
+
+```javascript
+import dictionary from "./external/ninolex-gh/dist/dictionary/ninolex_gh_dictionary.json";
+
+console.log(dictionary.length, "entries in Ninolex-GH");
+console.log(dictionary[0].grapheme, "→", dictionary[0].phoneme);
+```
+
+In **Python**:
+
+```python
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+path = root / "external" / "ninolex-gh" / "dist" / "dictionary" / "ninolex_gh_dictionary.json"
+
+data = json.loads(path.read_text(encoding="utf-8"))
+print(len(data), "entries loaded from Ninolex-GH")
+print(data[0]["grapheme"], "→", data[0]["phoneme"])
+```
+
+### Option 2 – Direct download
+
+Download the JSON or CSV directly from the repository and integrate into your build process.
+
+---
+
+## Pronunciation key (IPA subset)
+
+Ninolex-GH uses a practical subset of IPA for Ghanaian English. A few important symbols:
+
+| Symbol | Meaning | Example |
+|--------|---------|---------|
+| `ɛ` | Open-mid front vowel | "bed" |
+| `ɔ` | Open-mid back rounded vowel | Common in Ghanaian English |
+| `ŋ` | Velar nasal | "sing" |
+| `ʃ` | Voiceless postalveolar fricative | "ship" |
+| `tʃ` | Voiceless postalveolar affricate | "church" |
+| `dʒ` | Voiced postalveolar affricate | "judge" |
+| `ˈ` | Primary stress marker | Before the stressed syllable |
+| `.` | Syllable separator | For readability |
+
+For a complete overview of symbols and conventions, see **[IPA_GUIDE.md](IPA_GUIDE.md)**.
+
+---
+
+## Repository structure
+
+```text
+data/
+  core/
+    core_terms.csv           # exams, institutions, foods, slang
+  places/
+    regions.csv              # all 16 regions
+    towns.csv                # capitals and major towns
+    constituencies.csv       # electoral constituencies
+  people/
+    public_figures.csv       # presidents, Big Six, judges, footballers
+    complex_names.csv        # Ghanaian names often mispronounced by TTS
+  sports/
+    football_clubs.csv       # Ghana Premier League clubs
+  education/
+    shs.csv                  # secondary schools and universities
+
+build/
+  build_dictionary.py        # merge domain CSVs → unified dictionary
+  generate_pls.py            # compile dictionary → PLS export
+  generate_json.py           # compile dictionary → JSON export
+
+dist/
+  dictionary/
+    ninolex_gh_dictionary.csv    # unified dictionary (auto-generated)
+    ninolex_gh_dictionary.json   # JSON export (auto-generated)
+
+exports/
+  ninolex_gh_core.pls        # W3C PLS for TTS engines
+
+tests/
+  validate_ipa.py            # IPA character validation
+```
+
+---
+
+## Dictionary view vs domain sources
+
+**Contributors** edit domain-specific CSV files under `data/` (core terms, places, people, sports, education, etc.).
+
+**Consumers** use the unified dictionary and exports.
+
+The unified dictionary is available as:
+
+- CSV: `dist/dictionary/ninolex_gh_dictionary.csv`
+- JSON: `dist/dictionary/ninolex_gh_dictionary.json`
+- PLS: `exports/ninolex_gh_core.pls`
+
+The unified dictionary is generated by merging all domain CSVs. This lets maintainers organise entries by category while giving downstream users a single, consistent data source.
+
+### Rebuild commands
+
+```bash
+# Build unified dictionary (CSV)
+python3 build/build_dictionary.py
+
+# Generate JSON export
+python3 build/generate_json.py
+
+# Generate PLS export for TTS
+python3 build/generate_pls.py
+```
+
+---
+
+## Quality checks
+
+### IPA validation
+
+To verify that all phonemes use only approved IPA characters:
+
+```bash
+python3 tests/validate_ipa.py
+```
+
+This script checks the unified dictionary and reports any entries with invalid characters. See [IPA_GUIDE.md](IPA_GUIDE.md) for the approved symbol set.
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to propose changes, add new entries, and work with IPA for Ghanaian English.
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for the planned coverage (schools, constituencies, public figures, footballers, and more).
+
+## License
+
+This project is licensed under the MIT License – see [LICENSE](LICENSE) for details.

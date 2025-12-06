@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/ninolex_gh/__init__.py
+src/ninolex_gh/core.py
+src/ninolex_gh/exceptions.py
+src/ninolex_gh.egg-info/PKG-INFO
+src/ninolex_gh.egg-info/SOURCES.txt
+src/ninolex_gh.egg-info/dependency_links.txt
+src/ninolex_gh.egg-info/top_level.txt
+src/ninolex_gh/data/__init__.py
+src/ninolex_gh/data/ninolex_gh_dictionary.json
