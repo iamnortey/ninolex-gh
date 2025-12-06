@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package in editable mode
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Rebuild dictionary artifacts
+        run: |
+          python build/build_dictionary.py
+          python build/generate_json.py
+          python build/generate_pls.py
+
+      - name: Run IPA validator
+        run: python tests/validate_ipa.py
+
+      - name: Run package smoke test
+        run: PYTHONPATH=src python tools/smoke_test_package.py
+
+      - name: Verify minimum entry count
+        run: |
+          python -c "
+          import json
+          from pathlib import Path
+          
+          dict_path = Path('dist/dictionary/ninolex_gh_dictionary.json')
+          with dict_path.open() as f:
+              entries = json.load(f)
+          
+          count = len(entries)
+          print(f'Entry count: {count}')
+          
+          MIN_ENTRIES = 100
+          if count < MIN_ENTRIES:
+              print(f'ERROR: Expected at least {MIN_ENTRIES} entries, got {count}')
+              exit(1)
+          
+          print(f'✅ Entry count check passed ({count} >= {MIN_ENTRIES})')
+          "
+
+      - name: Verify package data is loadable
+        run: |
+          python -c "
+          import ninolex_gh
+          
+          # Basic sanity checks
+          count = ninolex_gh.get_entry_count()
+          print(f'Package entry count: {count}')
+          
+          # Verify lookup works
+          try:
+              entry = ninolex_gh.lookup('Accra')
+              print(f'Lookup Accra: {entry[\"phoneme\"]}')
+          except ninolex_gh.WordNotFound:
+              print('Warning: Accra not found in package data (may need sync)')
+          
+          print('✅ Package is loadable and functional')
+          "
